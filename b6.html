@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let size = 0;
+    while (size < 6) {
+        size = +prompt("Input size of heart (size >= 6)");
+    }
+
+    let i, j;
+    for (i = size / 2; i <= size; i = i + 2) {
+        for (j = 1; j < size - i; j = j + 2) {
+            document.write("&nbsp&nbsp&nbsp&nbsp");
+        }
+        for (j = 1; j <= i; j++) {
+            document.write("&nbsp*&nbsp");
+        }
+        for (j = 1; j <= size - i; j++) {
+            document.write("&nbsp&nbsp&nbsp&nbsp")
+        }
+        for (j = 1; j <= i; j++) {
+            document.write("&nbsp*&nbsp");
+        }
+        document.write("<br/>");
+    }
+    for (i = size; i >= 0; i--) {
+        for (j = i; j < size; j++) {
+            document.write('&nbsp&nbsp&nbsp&nbsp');
+        }
+        for (j = 1; j <= ((i * 2) - 1); j++) {
+            document.write("&nbsp*&nbsp");
+        }
+        document.write("<br/>");
+    }
+</script>
+</body>
+</html>

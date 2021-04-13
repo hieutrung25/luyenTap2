@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset>
+    <table>
+        <tr>
+            <td>So tien gui ban dau</td>
+            <td><input type="number" id="tienGoc"></td>
+        </tr>
+        <tr>
+            <td>So thang gui</td>
+            <td><input type="number" id="soThang"></td>
+        </tr>
+        <tr>
+            <td>Lai hang thang (%)</td>
+            <td><input type="number" id="laiSuat"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="tinhTien()" value="Tinh so tien sau gui">
+            </td>
+            <td><input type="text" id="tienTong" disabled></td>
+        </tr>
+    </table>
+</fieldset>
+<script>
+    function tinhTien() {
+        let tienTong = +document.getElementById('tienGoc').value;
+        let soThangGui = +document.getElementById('soThang').value;
+        let laiSuat = +document.getElementById('laiSuat').value / 100;
+        for (i = 0; i < soThangGui; i++) {
+            tienTong = tienTong + laiSuat * tienTong;
+        }
+        document.getElementById('tienTong').value = tienTong;
+    }
+</script>
+</body>
+</html>

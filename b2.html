@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function giaiThua(number) {
+        if (number === 0 || number === 1) return 1;
+
+        let result = 1;
+        for (let i = 2; i <= number; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    let number = +prompt("Enter number");
+    alert(number + "!= " + giaiThua(number));
+</script>
+
+
+</body>
+</html>

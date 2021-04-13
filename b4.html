@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = "";
+    for (let i = 1; i <= 10; i++) {
+        let a = "";
+        for (let j = 1; j <= 50; j++) {
+            if (i === 1 || i === 10 || j === 1 || j === 50) {
+                a += "*";
+            } else {
+                a += "&ensp;";
+            }
+        }
+        a += "</br>";
+        str += a;
+    }
+    document.write(str);
+</script>
+</body>
+</html>
